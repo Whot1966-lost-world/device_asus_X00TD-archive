@@ -52,7 +52,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             )
         );
 
-        KcalUtils.writeCurrentSettings(sharedPrefs);
+        if (KcalUtils.isKcalSupported())
+            KcalUtils.writeCurrentSettings(sharedPrefs);
         new SmartCharging(context).onBootCompleted();
 
         // === DELAYED TASKS === //
