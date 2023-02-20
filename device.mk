@@ -94,6 +94,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.charger.enable_suspend=true
 
+# DeviceSettings
+PRODUCT_PACKAGES += \
+   DeviceSettings
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.sdm660 \
@@ -372,6 +376,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.asus_parts.rc \
     init.msm.usb.configfs.rc \
     init.qcom.asus.rc \
     init.qcom.rc \
