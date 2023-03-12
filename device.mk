@@ -114,6 +114,10 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
     android.frameworks.displayservice@1.0.vendor
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    ZenParts
+
 # Doze mode
 PRODUCT_PACKAGES += \
     Doze
