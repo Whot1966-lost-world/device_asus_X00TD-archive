@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+#include <fstream>
 #include <vector>
 
 #include <android-base/logging.h>
