@@ -35,7 +35,7 @@ import android.util.Log;
 
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.settings.R;
+import org.lineageos.settings.device.R;
 
 public class SmartChargingService extends Service {
     private static final String TAG = "SmartChargingService";

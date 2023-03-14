@@ -33,7 +33,7 @@ import androidx.preference.TwoStatePreference;
 import com.android.settingslib.widget.MainSwitchPreference;
 import com.android.settingslib.widget.OnMainSwitchChangeListener;
 
-import org.lineageos.settings.R;
+import org.lineageos.settings.device.R;
 import org.lineageos.settings.preferences.SeekBarPreference;
 import org.lineageos.settings.PartsUtils;
 

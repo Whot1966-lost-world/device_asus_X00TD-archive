@@ -25,7 +25,7 @@ import androidx.preference.PreferenceCategory;
 
 import org.lineageos.settings.device.kcal.KCalSettingsActivity;
 import org.lineageos.settings.device.speaker.ClearSpeakerActivity;
-import org.lineageos.settings.device.smartcharging.SmartChargingActivity.java;
+import org.lineageos.settings.device.smartcharging.SmartChargingActivity;
 import org.lineageos.settings.device.preferences.SecureSettingListPreference;
 import org.lineageos.settings.device.preferences.SecureSettingSwitchPreference;
 import org.lineageos.settings.device.preferences.VibrationSeekBarPreference;
@@ -51,11 +51,8 @@ public class DeviceSettings extends PreferenceFragment implements
 
     public static final String PREF_KEY_FPS_INFO = "fps_info";
 
-    private static final String CATEGORY_DISPLAY = "display";
-    private static final String PREF_DEVICE_DOZE = "device_doze";
     private static final String PREF_DEVICE_KCAL = "device_kcal";
-    private static final String PREF_DEVICE_SMARTCHAGING = "device_smartcharging";
-
+    private static final String PREF_DEVICE_SMARTCHARGING = "device_smartcharging";
 
     private static final String DEVICE_DOZE_PACKAGE_NAME = "com.advanced.settings.doze";
 
@@ -148,13 +145,6 @@ public class DeviceSettings extends PreferenceFragment implements
         mPreset = (SecureSettingListPreference) findPreference(PREF_PRESET);
         mPreset.setOnPreferenceChangeListener(this);
 
-        if (FileUtils.fileWritable(HALL_WAKEUP_PATH)) {
-            SecureSettingSwitchPreference hall = (SecureSettingSwitchPreference) findPreference(PREF_HALL_WAKEUP);
-            hall.setChecked(FileUtils.getValue(HALL_WAKEUP_PATH).equals("Y"));
-            hall.setOnPreferenceChangeListener(this);
-        } else {
-            getPreferenceScreen().removePreference(findPreference(CATEGORY_HALL_WAKEUP));
-        }
     }
 
     @Override

@@ -71,18 +71,6 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         FileUtils.setValue(EARPIECE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_EARPIECE_GAIN, 0));
 
-        // Notification LED
-        FileUtils.setValue(DeviceSettings.NOTIF_LED_PATH,(1 + Math.pow(1.05694, Settings.Secure.getInt(
-                context.getContentResolver(), DeviceSettings.PREF_NOTIF_LED, 100))));
-
-        // Vibration Strength
-        FileUtils.setValue(DeviceSettings.VIBRATION_STRENGTH_PATH, Settings.Secure.getInt(
-                context.getContentResolver(), DeviceSettings.PREF_VIBRATION_STRENGTH, 80) / 100.0 * (DeviceSettings.MAX_VIBRATION - DeviceSettings.MIN_VIBRATION) + DeviceSettings.MIN_VIBRATION);
-        FileUtils.setValue(DeviceSettings.HALL_WAKEUP_PATH, Settings.Secure.getInt(
-                context.getContentResolver(), DeviceSettings.PREF_HALL_WAKEUP, 1) == 1 ? "Y" : "N");
-        FileUtils.setProp(DeviceSettings.HALL_WAKEUP_PROP, Settings.Secure.getInt(
-                context.getContentResolver(), DeviceSettings.PREF_HALL_WAKEUP, 1) == 1);
-
         // Dirac
         context.startService(new Intent(context, DiracService.class));
 

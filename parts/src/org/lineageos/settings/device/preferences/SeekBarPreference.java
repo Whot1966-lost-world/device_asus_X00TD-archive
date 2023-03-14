@@ -29,7 +29,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
 import org.lineageos.settings.PartsUtils;
-import org.lineageos.settings.R;
+import org.lineageos.settings.device.R;
 
 public class SeekBarPreference extends Preference
         implements SeekBar.OnSeekBarChangeListener,

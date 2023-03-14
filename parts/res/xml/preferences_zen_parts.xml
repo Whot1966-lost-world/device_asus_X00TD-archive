@@ -14,6 +14,9 @@
      limitations under the License.
 -->
 
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <PreferenceCategory
         android:key="display"
         android:title="@string/display_title">
@@ -27,14 +30,6 @@
                 android:action="android.intent.action.MAIN"
                 android:targetClass="org.lineageos.settings.kcal.KCalSettingsActivity"
                 android:targetPackage="org.lineageos.settings.kcal" />
-        </Preference>
-        <Preference
-            android:key="device_smartcharging"
-            android:title="@string/device_smart_charging_title"
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.smartcharging.SmartChargingActivity"
-                android:targetPackage="org.lineageos.settings.smartcharging" />
         </Preference>
         <org.lineageos.settings.device.preferences.SecureSettingSwitchPreference
             android:key="fps_info"
@@ -109,6 +104,16 @@
                 android:action="android.intent.action.MAIN"
                 android:targetClass="com.xiaomi.parts.speaker.ClearSpeakerActivity"
                 android:targetPackage="com.xiaomi.parts.speaker" />
+        </Preference>
+
+        <Preference
+            android:key="device_smartcharging" 
+            android:exported="true"
+            android:title="@string/device_smart_charging_title" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="org.lineageos.settings.device.smartcharging.SmartChargingActivity"
+                android:targetPackage="org.lineageos.settings.device" />
         </Preference>
 
     </PreferenceCategory>
