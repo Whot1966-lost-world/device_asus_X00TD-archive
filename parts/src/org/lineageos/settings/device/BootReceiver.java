@@ -23,6 +23,7 @@ import android.provider.Settings;
 
 import org.lineageos.settings.device.kcal.Utils;
 import org.lineageos.settings.device.preferences.SecureSettingSwitchPreference;
+import org.lineageos.settings.device.smartcharging.SmartCharging;
 
 import java.lang.Math.*;
 
@@ -84,6 +85,8 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 
         // Dirac
         context.startService(new Intent(context, DiracService.class));
+
+        context.startService(new Intent(context, SmartCharging.class));
 
         // FPS Info
         boolean enabled = Settings.Secure.getInt(context.getContentResolver(), 
