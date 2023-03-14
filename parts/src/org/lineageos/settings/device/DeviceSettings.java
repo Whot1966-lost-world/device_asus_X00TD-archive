@@ -25,6 +25,7 @@ import androidx.preference.PreferenceCategory;
 
 import org.lineageos.settings.device.kcal.KCalSettingsActivity;
 import org.lineageos.settings.device.speaker.ClearSpeakerActivity;
+import org.lineageos.settings.device.smartcharging.SmartChargingActivity.java;
 import org.lineageos.settings.device.preferences.SecureSettingListPreference;
 import org.lineageos.settings.device.preferences.SecureSettingSwitchPreference;
 import org.lineageos.settings.device.preferences.VibrationSeekBarPreference;
@@ -53,6 +54,8 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String CATEGORY_DISPLAY = "display";
     private static final String PREF_DEVICE_DOZE = "device_doze";
     private static final String PREF_DEVICE_KCAL = "device_kcal";
+    private static final String PREF_DEVICE_SMARTCHAGING = "device_smartcharging";
+
 
     private static final String DEVICE_DOZE_PACKAGE_NAME = "com.advanced.settings.doze";
 
@@ -107,6 +110,14 @@ public class DeviceSettings extends PreferenceFragment implements
         Preference kcal = findPreference(PREF_DEVICE_KCAL);
         kcal.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity().getApplicationContext(), KCalSettingsActivity.class);
+            startActivity(intent);
+            return true;
+        });
+
+        // Smart charging
+        Preference smartcharging = findPreference(PREF_DEVICE_SMARTCHARGING);
+        kcal.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(getActivity().getApplicationContext(), SmartChargingActivity.class);
             startActivity(intent);
             return true;
         });

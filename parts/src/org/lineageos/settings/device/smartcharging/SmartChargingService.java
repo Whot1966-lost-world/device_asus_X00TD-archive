@@ -16,7 +16,7 @@
  *
  */
 
-package org.lineageos.settings.device;
+package org.lineageos.settings.device.smartcharging;
 
 import android.app.AlarmManager;
 import android.app.Notification;
