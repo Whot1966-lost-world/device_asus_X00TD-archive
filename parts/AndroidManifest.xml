@@ -17,7 +17,9 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
+    <protected-broadcast android:name="org.lineageos.settings.device.smartcharging.BatteryMonitorReceiver" />
     <uses-sdk
         android:minSdkVersion="27"
         android:targetSdkVersion="30"/>
@@ -108,27 +110,10 @@
             android:name=".DiracService"
             android:enabled="true"
             android:stopWithTask="false" />
-    </application>
 
-        <activity
-            android:name=".smartcharging.SmartChargingActivity"
-            android:exported="false"
-            android:label="@string/smart_charging_title">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.battery" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/smart_charging_summary" />
-            <meta-data
-                android:name="com.android.settings.order"
-                android:value="5"/>
-        </activity>
-
-        <service android:name=".smartcharging.SmartChargingService"
-                android:exported="false">
+        <service 
+            android:name=".SmartChargingService"
+            android:exported="false">
         </service>
+    </application>
 </manifest>
