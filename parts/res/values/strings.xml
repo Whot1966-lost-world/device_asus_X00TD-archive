@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <resources>
-    <string name="zenparts">Zenparts</string>
+    <string name="zenparts">ZenParts</string>
     <string name="advanced_settings">Other system options</string>
     <string name="advanced_settings_summary">Device specific advanced settings</string>
 
@@ -47,9 +47,9 @@
     <string name="preset_triluminous">Triluminous</string>
     <string name="preset_deep_black_white">Deep black and white</string>
     <string name="preset_deep_natural">Deep natural</string>
-    <string name="preset_cool_amoled">Cool Amoled</string>
-    <string name="preset_extreme_amoled">Extreme Amoled</string>
-    <string name="preset_warm_amoled">Warm Amoled</string>
+    <string name="preset_cool_amoled">Cool AMOLED</string>
+    <string name="preset_extreme_amoled">Extreme AMOLED</string>
+    <string name="preset_warm_amoled">Warm AMOLED</string>
     <string name="preset_hybrid_mamba">Hybrid mamba</string>
     <string name="kcal_presets">@string/presets_dialog_title</string>
     <string name="kcal_reset">Reset</string>
@@ -61,6 +61,11 @@
     <string name="edit_value">Choose new value</string>
     <string name="default_value">Default value</string>
     <string name="edit_hint">Value between %1$d - %2$d</string>
+
+    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">Default</string>
+    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong press to set</string>
+    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
 
     <!-- Audio amplification -->
     <string name="audio_amplify">Sound</string>
@@ -120,4 +125,16 @@
     <string name="dirac_preset_treble_reduction">Treble reduction</string>
     <string name="dirac_preset_soft_bass">Soft bass</string>
     <string name="dirac_preset_soft_treble">Soft treble</string>
+
+    <!-- Smart charging -->
+    <string name="smart_charging_title">Smart Charging</string>
+    <string name="smart_charging_summary">Set maximum charging level</string>
+    <string name="smart_charging_switch_title">Enable Smart Charging</string>
+    <string name="smart_charging_level_title">Stop trigger level</string>
+    <string name="smart_charging_resume_level_title">Start trigger level</string>
+    <string name="smart_charging_battery_temperature">Battery temperature</string>
+    <string name="smart_charging_reset_stats_title">Reset battery stats</string>
+    <string name="smart_charging_reset_stats_summary">Reset battery statistics after reaching user defined charging level</string>
+    <string name="smart_charging_warning">Stop trigger level should be always greater than Start trigger level</string>
+    <string name="smart_charging_footer">Smart Charging allows you to set maximum charging level to extend the lifespan of your battery. When enabled, battery stops charging at Stop trigger level and resumes charging at Start trigger level. Stop trigger level should be always greater than Start trigger level.</string>
 </resources>

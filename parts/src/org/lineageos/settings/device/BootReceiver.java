@@ -24,6 +24,8 @@ import android.provider.Settings;
 import org.lineageos.settings.device.kcal.Utils;
 import org.lineageos.settings.device.preferences.SecureSettingSwitchPreference;
 
+import org.lineageos.settings.smartcharging.SmartCharging;
+
 import java.lang.Math.*;
 
 public class BootReceiver extends BroadcastReceiver implements Utils {
@@ -72,6 +74,6 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 
         // Dirac
         context.startService(new Intent(context, DiracService.class));
-
+        new SmartCharging(context).onBootCompleted();
     }
 }
