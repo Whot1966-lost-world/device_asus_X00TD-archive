@@ -26,7 +26,6 @@
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_DEVICE_CONFIG" />
     <uses-permission android:name="android.permission.WRITE_DEVICE_CONFIG" />
 
     <protected-broadcast android:name="org.lineageos.settings.smartcharging.BatteryMonitorReceiver" />
@@ -94,25 +93,6 @@
         </service>
 
         <activity
-            android:name=".speaker.ClearSpeakerActivity"
-            android:exported="true"
-            android:label="@string/clear_speaker_title">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.sound" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/clear_speaker_summary" />
-        </activity>
-
-        <activity
             android:name=".smartcharging.SmartChargingActivity"
             android:exported="true"
             android:label="@string/smart_charging_title">
@@ -150,61 +130,5 @@
             </intent-filter>
         </provider>
 
-        <service
-            android:name=".pocketjudge.PocketJudgeService"
-            android:exported="false">
-        </service>
-
-        <activity
-            android:name=".pocketjudge.PocketJudgeActivity"
-            android:exported="true"
-            android:label="@string/pocket_judge_title">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.display" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/pocket_judge_summary" />
-        </activity>
-
-        <receiver
-            android:name=".PhoneStateReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </receiver>
-
-        <activity
-            android:name=".uibench.JitterTestActivity"
-            android:exported="true"
-            android:label="@string/jitter_test_title">
-            <intent-filter>
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-
-            <!-- Mark this activity as a dynamic setting in the development category. -->
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.development" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:value="@string/jitter_test_summary" />
-            <meta-data
-                android:name="com.android.settings.order"
-                android:value="1" />
-        </activity>
     </application>
 </manifest>

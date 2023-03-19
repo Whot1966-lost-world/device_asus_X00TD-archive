@@ -29,7 +29,7 @@ import org.lineageos.settings.smartcharging.SmartCharging;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
-    private static final String TAG = "XiaomiParts";
+    private static final String TAG = "ZenParts";
 
     @Override
     public void onReceive(final Context context, Intent intent) {

@@ -1,5 +1,5 @@
 on boot
-   # Battery life saver
+   # Smart Charging
    chown system system /sys/class/power_supply/battery/charging_enabled
    chmod 0666 /sys/class/power_supply/battery/charging_enabled
    chown system system /sys/class/power_supply/battery/capacity
@@ -9,9 +9,6 @@ on boot
    chown system system /sys/class/power_supply/usb/current_max
    chmod 0666 /sys/class/power_supply/usb/current_max
 
-    # FPS Node
-    chown system graphics /sys/class/graphics/fb0/measured_fps
-    chmod 0666 /sys/class/graphics/fb0/measured_fps
 on property:sys.boot_completed=1
     # Audio gain permissions
     chown system system /sys/kernel/sound_control/headphone_gain
@@ -19,7 +16,3 @@ on property:sys.boot_completed=1
     restorecon_recursive /sys/kernel/sound_control
     chmod 0660 /sys/kernel/sound_control/headphone_gain
     chmod 0660 /sys/kernel/sound_control/mic_gain
-on post-fs
-    # Pocket Judge
-    chown system system /sys/kernel/pocket_judge/inpocket
-    chmod 664 /sys/kernel/pocket_judge/inpocket
