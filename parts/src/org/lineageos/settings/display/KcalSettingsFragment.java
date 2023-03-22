@@ -30,13 +30,13 @@ import androidx.preference.SeekBarPreference;
 import androidx.preference.SwitchPreference;
 
 import org.lineageos.settings.R;
-import org.lineageos.settings.utils.FileUtils;
+import org.lineageos.settings.PartsUtils;
 import org.lineageos.settings.display.KcalUtils;
 
 public class KcalSettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener {
 
-    private static final String TAG = "KcalSettings";
+    private static final String TAG = KcalSettingsFragment.class.getSimpleName();
 
     private SharedPreferences mSharedPrefs;
 

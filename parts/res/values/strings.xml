@@ -16,6 +16,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="device_settings_app_name">Zenfone Device Options</string>
+
     <!-- Audio amplification -->
     <string name="volume_gain_label">Sound amplifier</string>
     <string name="volume_gain_summary">Control audio gain</string>
@@ -31,7 +33,7 @@
     <!-- Dirac settings -->
     <string name="dirac_enable">Use sound enhancer</string>
     <string name="dirac_title">Sound enhancer</string>
-    <string name="dirac_summary">Optimize audio quality. Powered by Dirac</string>
+    <string name="dirac_summary">Optimize audio quality</string>
     <string name="dirac_headset_title">Choose headphones type</string>
     <string name="dirac_preset_title">Choose a preset</string>
 
@@ -100,10 +102,6 @@
     <string name="smart_charging_warning">Stop trigger level should be always greater than Start trigger level</string>
     <string name="smart_charging_footer">Smart Charging allows you to set maximum charging level to extend the lifespan of your battery. When enabled, battery stops charging at Stop trigger level and resumes charging at Start trigger level. Stop trigger level should be always greater than Start trigger level.</string>
 
-    <!-- Misc -->
-    <string name="not_now">Not now</string>
-    <string name="next_update_time">Next update at %1$s</string>
-
     <!-- Kcal settings -->
     <string name="kcal_settings_title">Display colors</string>
     <string name="kcal_settings_summary">Adjust the color of your display</string>
@@ -117,4 +115,7 @@
     <string name="reset_default_button_summary">Reset all the configurations of this screen</string>
     <string name="contrast_slider_title">Contrast</string>
 
+    <!-- Misc -->
+    <string name="not_now">Not now</string>
+    <string name="next_update_time">Next update at %1$s</string>
 </resources>

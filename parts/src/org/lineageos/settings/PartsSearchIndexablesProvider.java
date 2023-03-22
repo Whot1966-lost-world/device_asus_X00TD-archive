@@ -37,6 +37,7 @@ import static android.provider.SearchIndexablesContract.COLUMN_INDEX_NON_INDEXAB
 import org.lineageos.settings.dirac.DiracActivity;
 import org.lineageos.settings.smartcharging.SmartChargingActivity;
 import org.lineageos.settings.soundcontrol.SoundControlSettingsActivity;
+import org.lineageos.settings.display.KcalSettingsActivity;
 
 import java.util.HashSet;
 
@@ -54,6 +55,8 @@ public class PartsSearchIndexablesProvider extends SearchIndexablesProvider {
                     SmartChargingActivity.class.getName(), iconResId));
         sResMap.add(new SearchIndexableResource(rank, R.xml.soundcontrol_settings,
                     SoundControlSettingsActivity.class.getName(), iconResId));
+        sResMap.add(new SearchIndexableResource(rank, R.xml.kcal_settings,
+                    KcalSettingsActivity.class.getName(), iconResId));
     }
 
     @Override

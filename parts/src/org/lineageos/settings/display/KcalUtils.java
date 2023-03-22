@@ -18,7 +18,7 @@ package org.lineageos.settings.display;
 
 import android.content.SharedPreferences;
 
-import org.lineageos.settings.utils.FileUtils;
+import org.lineageos.settings.PartsUtils;
 
 public final class KcalUtils {
 
@@ -58,14 +58,14 @@ public final class KcalUtils {
             .replace("G", getNodeData(KCAL_RGB_NODE, 2))
             .replace("B", getNodeData(KCAL_RGB_NODE, 3));
 
-        FileUtils.writeLine(node, mNewNodeData);
+        PartsUtils.writeValue(node, mNewNodeData);
     }
 
     // Get the value of the given position
     // 0 is the full node value
     // 1, 2 and 3 will return the first, second and third string divided by an space in the specified node
     public static String getNodeData(String node, int position) {
-        String mNodeData = FileUtils.readOneLine(node);
+        String mNodeData = PartsUtils.readLine(node);
         switch(position) {
             case 0:
                 return mNodeData;
@@ -79,7 +79,7 @@ public final class KcalUtils {
     }
 
     public static void writeCurrentSettings(SharedPreferences sharedPrefs) {
-        FileUtils.writeLine(KcalUtils.KCAL_ENABLE_NODE,
+        PartsUtils.writeValue(KcalUtils.KCAL_ENABLE_NODE,
             sharedPrefs.getBoolean("kcal_enable", false) ? "1" : "0");
 
         KcalUtils.writeConfigToNode(KcalUtils.KCAL_RGB_NODE, 1, sharedPrefs.getInt("red_slider", 256));
@@ -90,6 +90,6 @@ public final class KcalUtils {
     }
 
     public static boolean isKcalSupported() {
-        return FileUtils.fileExists(KCAL_ENABLE_NODE);
+        return PartsUtils.fileExists(KCAL_ENABLE_NODE);
     }
 }
