@@ -114,6 +114,9 @@
     <string name="reset_default_button_title">Reset to default configuration</string>
     <string name="reset_default_button_summary">Reset all the configurations of this screen</string>
     <string name="contrast_slider_title">Contrast</string>
+    <string name="hue_slider_title">Hue</string>
+    <string name="min_slider_title">Minimum</string>
+    <string name="value_slider_title">Value</string>
 
     <!-- Misc -->
     <string name="not_now">Not now</string>

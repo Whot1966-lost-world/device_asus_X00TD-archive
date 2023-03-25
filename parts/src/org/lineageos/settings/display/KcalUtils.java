@@ -26,6 +26,9 @@ public final class KcalUtils {
     public static final String KCAL_RGB_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal";
     public static final String KCAL_SATURATION_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal_sat";
     public static final String KCAL_CONTRAST_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal_cont";
+    public static final String KCAL_HUE_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal_hue";
+    public static final String KCAL_MIN_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal_min";
+    public static final String KCAL_VALUE_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal_val";
 
     // Write the given value to the given position on the KCAL node
     // position 0 is the full node, so the function will write the value to the node without following a pattern
@@ -85,8 +88,11 @@ public final class KcalUtils {
         KcalUtils.writeConfigToNode(KcalUtils.KCAL_RGB_NODE, 1, sharedPrefs.getInt("red_slider", 256));
         KcalUtils.writeConfigToNode(KcalUtils.KCAL_RGB_NODE, 2, sharedPrefs.getInt("green_slider", 256));
         KcalUtils.writeConfigToNode(KcalUtils.KCAL_RGB_NODE, 3, sharedPrefs.getInt("blue_slider", 256));
-        KcalUtils.writeConfigToNode(KcalUtils.KCAL_SATURATION_NODE, 0, sharedPrefs.getInt("saturation_slider", 255));
-        KcalUtils.writeConfigToNode(KcalUtils.KCAL_CONTRAST_NODE, 0, sharedPrefs.getInt("contrast_slider", 255));
+        KcalUtils.writeConfigToNode(KcalUtils.KCAL_SATURATION_NODE, 0, sharedPrefs.getInt("saturation_slider", 35));
+        KcalUtils.writeConfigToNode(KcalUtils.KCAL_CONTRAST_NODE, 0, sharedPrefs.getInt("contrast_slider", 127));
+        KcalUtils.writeConfigToNode(KcalUtils.KCAL_HUE_NODE, 0, sharedPrefs.getInt("hue_slider", 0));
+        KcalUtils.writeConfigToNode(KcalUtils.KCAL_MIN_NODE, 0, sharedPrefs.getInt("min_slider", 35));
+        KcalUtils.writeConfigToNode(KcalUtils.KCAL_VALUE_NODE, 0, sharedPrefs.getInt("value_slider", 127));
     }
 
     public static boolean isKcalSupported() {

@@ -46,6 +46,9 @@ public class KcalSettingsFragment extends PreferenceFragment implements
     private SeekBarPreference mBlueColorSlider;
     private SeekBarPreference mSaturationSlider;
     private SeekBarPreference mContrastSlider;
+    private SeekBarPreference mHueSlider;
+    private SeekBarPreference mMinSlider;
+    private SeekBarPreference mValueSlider;
     private Preference mResetButton;
 
     @Override
@@ -95,6 +98,18 @@ public class KcalSettingsFragment extends PreferenceFragment implements
                 KcalUtils.writeConfigToNode(KcalUtils.KCAL_CONTRAST_NODE, 0, (Integer) newValue);
                 mContrastSlider.setSummary(String.valueOf(newValue));
                 break;
+            case "hue_slider":
+                KcalUtils.writeConfigToNode(KcalUtils.KCAL_HUE_NODE, 0, (Integer) newValue);
+                mHueSlider.setSummary(String.valueOf(newValue));
+                break;
+            case "min_slider":
+                KcalUtils.writeConfigToNode(KcalUtils.KCAL_MIN_NODE, 0, (Integer) newValue);
+                mMinSlider.setSummary(String.valueOf(newValue));
+                break;
+            case "value_slider":
+                KcalUtils.writeConfigToNode(KcalUtils.KCAL_VALUE_NODE, 0, (Integer) newValue);
+                mValueSlider.setSummary(String.valueOf(newValue));
+                break;
         }
         return true;
     }
@@ -134,11 +149,18 @@ public class KcalSettingsFragment extends PreferenceFragment implements
 
         mSaturationSlider = (SeekBarPreference) findPreference("saturation_slider");
         configureSlider(mSaturationSlider, this);
-        mSaturationSlider.setMin(224);
 
         mContrastSlider = (SeekBarPreference) findPreference("contrast_slider");
         configureSlider(mContrastSlider, this);
-        mContrastSlider.setMin(224);
+
+        mHueSlider = (SeekBarPreference) findPreference("hue_slider");
+        configureSlider(mHueSlider, this);
+
+        mMinSlider = (SeekBarPreference) findPreference("min_slider");
+        configureSlider(mMinSlider, this);
+
+        mValueSlider = (SeekBarPreference) findPreference("value_slider");
+        configureSlider(mValueSlider, this);
     }
 
 

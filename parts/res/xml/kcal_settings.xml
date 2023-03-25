@@ -68,20 +68,41 @@
         android:key="kcal_calibration_preference_category"
         android:title="@string/kcal_calibration_preference_category_title">
 
-        <SeekBarPreference
-            android:defaultValue="255"
+        <SeekBarPreference	
+            android:defaultValue="35"
             android:dependency="kcal_enable"
             android:layout_height="10dp"
             android:key="saturation_slider"
-            android:max="383"
+            android:max="158"
             android:title="@string/saturation_slider_title" />
         <SeekBarPreference
-            android:defaultValue="255"
+            android:defaultValue="127"
             android:dependency="kcal_enable"
             android:layout_height="10dp"
             android:key="contrast_slider"
-            android:max="383"
+            android:max="255"
             android:title="@string/contrast_slider_title" />
+        <SeekBarPreference
+            android:defaultValue="0"
+            android:dependency="kcal_enable"
+            android:layout_height="10dp"
+            android:key="hue_slider"
+            android:max="1536"
+            android:title="@string/hue_slider_title" />
+        <SeekBarPreference
+            android:defaultValue="35"
+            android:dependency="kcal_enable"
+            android:layout_height="10dp"
+            android:key="min_slider"
+            android:max="256"
+            android:title="@string/min_slider_title" />
+        <SeekBarPreference
+            android:defaultValue="127"
+            android:dependency="kcal_enable"
+            android:layout_height="10dp"
+            android:key="value_slider"
+            android:max="255"
+            android:title="@string/value_slider_title" />
         </PreferenceCategory>
 </PreferenceScreen>
 
